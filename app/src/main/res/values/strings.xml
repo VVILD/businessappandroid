@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="thankyou_string">You have successfully booked your shipment. We will take it forward from here. Sit back and relax !</string>
+    <string name="app_name">Business Sendd</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="terms_and_condition"><u>By creating sendd account, you agree\nto the Terms of Service and Privacy Policy.</u></string>
+    <string name="FullName">Full Name</string>
+    <string name="PhoneNumber">99 99 99 99 99</string>
+    <string name="FaltnoBldNo">Flat/House no.</string>
+    <string name="Locality">Locality</string>
+    <string name="City">City</string>
+    <string name="State">State</string>
+    <string name="Country">Country</string>
+    <string name="Pincode">Pincode</string>
+    <string name="SearchAddressField">Search Street Address</string>
+    <string name="AddAddressManually">Manually add new address</string>
+    <string name="Phone">Phone Number</string>
+    <string name="Password">Password</string>
+    <string name="Login">Login</string>
+    <string name="Signup">Sign up</string>
+    <string name="Save">Save</string>
+
+    <string-array name="nav_drawer_items">
+        <item>Create Order</item>
+        <item>Previous Order</item>
+        <item>Order Billing</item>
+        <item>Customer Support</item>
+        <item>Logout</item>
+        <item>Dummy</item>
+    </string-array>
+
+    <string-array name="time_slots">
+        <item>10:00 AM</item>
+        <item>10:30 AM</item>
+        <item>11:00 AM</item>
+        <item>11:30 AM</item>
+        <item>12:00 PM</item>
+        <item>12:30 PM</item>
+        <item>01:00 PM</item>
+        <item>01:30 PM</item>
+        <item>02:00 PM</item>
+        <item>02:30 PM</item>
+        <item>03:00 PM</item>
+        <item>03:30 PM</item>
+        <item>04:00 PM</item>
+        <item>04:30 PM</item>
+        <item>05:00 PM</item>
+        <item>05:30 PM</item>
+        <item>06:00 PM</item>
+    </string-array>
+
+</resources>

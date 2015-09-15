@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="co.businesssendd">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!--to access internet -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <!--the Android application can register and receive messages.-->
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <!--to prevent other Android applications from registering and receiving the Android application's messages.-->
+    <permission
+        android:name="co.sendd.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+    <uses-permission android:name="co.sendd.permission.C2D_MESSAGE" />
+
+    <!--the application can keep the processor from sleeping when a message is received.-->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application
+        android:name="co.businesssendd.helper.App"
+        android:allowBackup="true"
+        android:icon="@drawable/logo_blue_white"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="co.businesssendd.activity.Activity_SplashScreen"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="co.businesssendd.activity.Activity_Main"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="co.businesssendd.activity.Activity_AddProduct"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="co.businesssendd.activity.Activity_ThankYou"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.Activity_Login"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <meta-data
+            android:name="AA_DB_NAME"
+            android:value="Sendd.db" />
+        <meta-data
+            android:name="AA_DB_VERSION"
+            android:value="9" />
+    </application>
+</manifest>

@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <include layout="@layout/toolbar_product_activity"
+        android:id="@+id/Main_toolbar"/>
+    <FrameLayout
+
+        android:id="@+id/frame_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Main_toolbar"
+        android:layout_margin="10dp"
+        android:background="@android:drawable/dialog_holo_light_frame"
+        android:padding="20dp">
+
+        <LinearLayout
+            android:id="@+id/rlbuttonLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="100">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="70"
+                    android:gravity="center"
+                    android:text="Item:"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:singleLine="true"
+                    android:id="@+id/etItemName"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_margin="4dp"
+                    android:layout_weight="30"
+                    android:background="@drawable/border_blue"
+                    android:gravity="center"
+                    android:hint="Item Name"
+                    android:textColor="@color/black"
+                    android:textColorHint="#e4e4e4" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="100">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="70"
+                    android:gravity="center"
+                    android:text="SKU:"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:singleLine="true"
+                    android:id="@+id/etSKU"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_margin="4dp"
+                    android:layout_weight="30"
+                    android:background="@drawable/border_blue"
+                    android:gravity="center"
+                    android:hint="SKU"
+                    android:textColor="@color/black"
+                    android:textColorHint="#e4e4e4" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="100">
+
+
+
+                <EditText
+                    android:singleLine="true"
+                    android:inputType="numberDecimal"
+                    android:id="@+id/etQuantity"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_margin="4dp"
+                    android:layout_weight="50"
+                    android:background="@drawable/border_blue"
+                    android:gravity="center"
+                    android:hint="Quantity"
+                    android:textColor="@color/black"
+                    android:textColorHint="#e4e4e4" />
+
+                <EditText
+                    android:singleLine="true"
+                    android:inputType="numberDecimal"
+                    android:id="@+id/etUnit_Price"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_margin="4dp"
+                    android:layout_weight="50"
+                    android:background="@drawable/border_blue"
+                    android:gravity="center"
+                    android:hint="Unit Price"
+                    android:textColor="@color/black"
+                    android:textColorHint="#e4e4e4" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="100">
+
+
+
+                <EditText
+                    android:singleLine="true"
+                    android:inputType="numberDecimal"
+                    android:id="@+id/etWeight"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_margin="4dp"
+                    android:layout_weight="50"
+                    android:background="@drawable/border_blue"
+                    android:gravity="center"
+                    android:hint="Total Weight"
+                    android:textColor="@color/black"
+                    android:textColorHint="#e4e4e4" />
+                <EditText
+                    android:enabled="false"
+                    android:singleLine="true"
+                    android:inputType="numberDecimal"
+                    android:id="@+id/etPrice"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_margin="4dp"
+                    android:layout_weight="50"
+                    android:background="@drawable/border_blue"
+                    android:gravity="center"
+                    android:hint="Total Price"
+                    android:textColor="@color/black"
+                    android:textColorHint="#e4e4e4" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="100">
+
+                <Button
+                    android:id="@+id/addProduct"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/frame_container"
+                    android:layout_margin="10dp"
+                    android:layout_weight="50"
+                    android:background="@drawable/buttons_save"
+                    android:text="+ product"
+                    android:textColor="@color/white" />
+
+                <Button
+                    android:id="@+id/removeProduct"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/frame_container"
+                    android:layout_margin="10dp"
+                    android:layout_weight="50"
+                    android:background="@drawable/buttons_save"
+                    android:text="- Product"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/CreateOrder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/frame_container"
+        android:layout_margin="10dp"
+        android:background="@drawable/buttons_save"
+        android:text="Place Order"
+        android:textColor="@color/white" />
+</RelativeLayout>
+
