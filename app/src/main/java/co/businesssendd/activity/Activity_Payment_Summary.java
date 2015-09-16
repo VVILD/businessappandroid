@@ -49,13 +49,15 @@ public class Activity_Payment_Summary extends AppCompatActivity {
         PaymentSummary.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent i = new Intent(getApplicationContext(), Activity_PS_Item_details.class);
-                Gson GS = new Gson();
-                String Product = GS.toJson(billings.get(position).getProducts());
-                i.putExtra("Products", Product);
-                startActivity(i);
-                Activity_Payment_Summary.this.overridePendingTransition(R.animator.pull_in_right, R.animator.push_out_left);
-            }
+                if(billings.get(position).getProducts()!= null) {
+                    Intent i = new Intent(getApplicationContext(), Activity_PS_Item_details.class);
+                    Gson GS = new Gson();
+                    String Product = GS.toJson(billings.get(position).getProducts());
+                    i.putExtra("Products", Product);
+                    startActivity(i);
+                    Activity_Payment_Summary.this.overridePendingTransition(R.animator.pull_in_right, R.animator.push_out_left);
+                }
+                }
         });
 
     }

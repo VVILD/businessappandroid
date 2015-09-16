@@ -13,6 +13,7 @@ import android.widget.TextView;
 
 import com.google.gson.Gson;
 
+import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.List;
 
@@ -45,9 +46,13 @@ public class Activity_PS_Item_details extends AppCompatActivity {
                 }
         );
         Gson GS = new Gson();
-        products = Arrays.asList(GS.fromJson(getIntent().getStringExtra("Products"), Billing_Product[].class));
-        madapter = new ProductList_Adapter(this, R.layout.list_item_paymentsummary, products);
-        ProductDetailsList.setAdapter(madapter);
+        try {
+            products = Arrays.asList(GS.fromJson(getIntent().getStringExtra("Products"), Billing_Product[].class));
+            madapter = new ProductList_Adapter(this, R.layout.list_item_paymentsummary, products);
+            ProductDetailsList.setAdapter(madapter);
+        }catch (NullPointerException i){
+
+        }
     }
 
     //Address Holder
@@ -126,16 +131,21 @@ public class Activity_PS_Item_details extends AppCompatActivity {
                 addresslist_holder = (Productlist_holder) convertView.getTag();
             }
 
-
             addresslist_holder.Name.setText(Billing_details.get(position).getName());
-            addresslist_holder.DateVal.setText(Billing_details.get(position).getDate());
-            addresslist_holder.Price.setText(Billing_details.get(position).getPrice());
-            addresslist_holder.Remittance.setText(Billing_details.get(position).getRemittance());
-            addresslist_holder.shipping_cost.setText(Billing_details.get(position).getShipping_cost());
-            addresslist_holder.weight.setText(Billing_details.get(position).getApplied_weight());
-            addresslist_holder.cod_cost.setText(Billing_details.get(position).getCod_cost());
-            addresslist_holder.return_cost.setText(Billing_details.get(position).getCod_cost());
+            SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
+            try {
 
+                addresslist_holder.DateVal.setText(sdf.format(Billing_details.get(position).getDate()));
+                addresslist_holder.Price.setText(Billing_details.get(position).getPrice());
+                addresslist_holder.Remittance.setText(Billing_details.get(position).getRemittance());
+                addresslist_holder.shipping_cost.setText(Billing_details.get(position).getShipping_cost());
+                addresslist_holder.weight.setText(Billing_details.get(position).getApplied_weight());
+                addresslist_holder.cod_cost.setText(Billing_details.get(position).getCod_cost());
+                addresslist_holder.return_cost.setText(Billing_details.get(position).getCod_cost());
+
+            }catch (IllegalArgumentException e){
+
+            }
             return convertView;
         }
     }
