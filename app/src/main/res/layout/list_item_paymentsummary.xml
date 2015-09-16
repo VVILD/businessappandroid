@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:drawable/dialog_holo_light_frame">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:focusable="false"
+        android:minHeight="100dp"
+        android:orientation="horizontal"
+        android:weightSum="100">
+
+        <LinearLayout
+            android:id="@+id/PickupTime"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="40"
+            android:background="@color/blue"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="15dp"
+            android:textSize="20sp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="OrderId"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/OrderID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="2199"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="City"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/City"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Mumbai"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <RelativeLayout
+             android:layout_width="0dp"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:layout_weight="60">
+
+            <TextView
+                android:id="@+id/NameText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:gravity="center_vertical"
+                android:padding="5dp"
+                android:text="Name"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:textColor="@android:color/holo_red_dark"
+                android:id="@+id/Name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/NameText"
+                android:gravity="center_vertical"
+                android:padding="5dp"
+                android:text="Groyne techSatavali vasai(East)O"
+                android:textSize="18sp" />
+
+
+            <TextView
+                android:id="@+id/shipping_cost_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Name"
+                android:padding="5dp"
+                android:text="Shipping Cost (₹)"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:textColor="@android:color/holo_red_dark"
+                android:id="@+id/shipping_cost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/shipping_cost_text"
+                android:padding="5dp"
+                android:text="20"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/rem_pending_Text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/shipping_cost"
+                android:padding="5dp"
+                android:text="Remittance Pending (₹)"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:textColor="@android:color/holo_red_dark"
+                android:id="@+id/rem_pending"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rem_pending_Text"
+                android:padding="5dp"
+                android:text="0"
+                android:textSize="18sp" />
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>
