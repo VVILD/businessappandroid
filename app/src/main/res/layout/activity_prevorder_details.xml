@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/Main_toolbar"
+        layout="@layout/toolbar_prevorderdetails" />
+
+    <ScrollView
+
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/Main_toolbar"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Customer Details"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/Customer_Details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="Sendd Tech,\n8588869761,\na@s.com"
+                android:textColor="@color/blue"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:gravity="left"
+                android:text="Customer Address"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/Customer_Address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="Address 1,\nAddress 2,\n458441,\nNeemuch, MADHYA PRADESH"
+                android:textColor="@color/blue"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Type Of Shipment"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/Type_of_shipment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="Premium"
+                android:textColor="@color/blue"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Payment Method"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/Payment_Method"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="Free Shipping"
+                android:textColor="@color/blue"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Date"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/Date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="2015-09-16"
+                android:textColor="@color/blue"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/ParcelDetails"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/blue"
+                android:text="Parcel Details"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+    </ScrollView>
+</RelativeLayout>

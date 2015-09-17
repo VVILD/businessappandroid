@@ -66,6 +66,18 @@
             android:label="@string/app_name"
              android:screenOrientation="portrait" />
         <activity
+            android:name=".activity.Activity_PrevOrder_details"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.Activity_PrevOrder_parcelDetails"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+        android:name=".activity.Activity_parcel_tracking"
+        android:label="@string/app_name"
+        android:screenOrientation="portrait" />
+        <activity
             android:name=".activity.Activity_PS_Item_details"
             android:label="@string/app_name"
             android:screenOrientation="portrait" />

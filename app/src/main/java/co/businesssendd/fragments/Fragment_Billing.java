@@ -126,7 +126,6 @@ public class Fragment_Billing extends Fragment {
                                     JSONArray jArray = new JSONArray(result);
                                     for (int j = 0; j < jArray.length(); j++) {
                                         JSONArray jArrayObject = jArray.getJSONArray(j);
-                                        Log.i("sdfasdf", jArrayObject.get(1).toString());
                                         Billing mBilling = new Billing();
                                         ArrayList<Billing_Product> productArrayList = new ArrayList<>();
                                         mBilling.setDrop_address_address(jArrayObject.getJSONObject(1).getString("drop_address_address"));

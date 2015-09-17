@@ -27,9 +27,18 @@ public interface NetworkCalls {
 
     @Headers("Authorization:A")
     @POST("/bapi/v3/order/")
-    void CreateOrder( @Body Order order, Callback<Order> orderCallback);
+    void CreateOrder(@Body Order order, Callback<Order> orderCallback);
 
     @GET("/bapi/v2/invoice/")
-    void getBilling(@Query("b_username") String b_username,@Query("start_date") String start_date,@Query("end_date") String end_date, Callback<Response> billingCallback);
+    void getBilling(@Query("b_username") String b_username, @Query("start_date") String start_date, @Query("end_date") String end_date, Callback<Response> billingCallback);
+
+    @GET("/bapi/v2/order/")
+    void getPreviousOrder(@Query("q") String q, @Query("limit") String limit, @Query("offset") String offset, @Query("order_by") String order_by, Callback<Response> billingCallback);
+
+    @GET("/{resource_uri}")
+    void getNewPage(@Path(value = "resource_uri", encode = false) String resource_uri, Callback<Response> billingCallback);
+
+    @GET("/bapi/v2/search/tracking/")
+    void getSearchReasult(@Query("tracking_id") String tracking_id, Callback<Response> billingCallback);
 
 }

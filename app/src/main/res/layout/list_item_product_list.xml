@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/frame_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/Main_toolbar"
+    android:layout_margin="5dp"
+    android:background="@android:drawable/dialog_holo_light_frame"
+    android:padding="10dp">
+
+    <LinearLayout
+        android:id="@+id/rlbuttonLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:orientation="horizontal"
+            android:weightSum="100">
+
+            <TextView
+                android:id="@+id/TrackingId"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="50"
+                android:gravity="center"
+                android:text="B144217P49"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="50"
+                android:gravity="center"
+                android:text="Documents"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="100">
+
+            <TextView
+                android:id="@+id/SKU"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="50"
+                android:gravity="center"
+                android:text="SKU:123"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/qty"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="50"
+                android:gravity="center"
+                android:text="Quantity:4"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="100">
+
+
+            <TextView
+                android:id="@+id/inputwt"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="50"
+                android:gravity="center"
+                android:text="Input Wt.: 10"
+                android:textSize="20sp" />
+            <TextView
+                android:id="@+id/chargewt"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="50"
+                android:gravity="center"
+                android:text="Charged Wt.:20"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="100">
+
+
+            <TextView
+                android:id="@+id/totalprice"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="50"
+                android:gravity="center"
+                android:text="Total Price:20"
+                android:textSize="20sp" />
+            <TextView
+                android:id="@+id/shippingcost"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="50"
+                android:gravity="center"
+                android:text="Shipping Cost:20"
+                android:textSize="20sp" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

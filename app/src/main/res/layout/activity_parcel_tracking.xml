@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <include
+        android:id="@+id/Main_toolbar"
+        layout="@layout/toolbar_tracking" />
+
+    <RelativeLayout
+        android:id="@+id/rlline5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Main_toolbar"
+        android:layout_marginTop="25dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Parcel Details"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlline6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rlline5"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/tvDate"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="Date" />
+
+        <TextView
+            android:id="@+id/tvStatus"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_toRightOf="@+id/tvDate"
+            android:gravity="center"
+            android:text="Status" />
+
+        <TextView
+            android:id="@+id/tvLocation"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_toRightOf="@+id/tvStatus"
+            android:gravity="center"
+            android:text="Location" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/ItemTrackingList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rlline6"
+        android:gravity="center"
+        android:minHeight="100dp"
+        android:textSize="20sp" />
+</RelativeLayout>

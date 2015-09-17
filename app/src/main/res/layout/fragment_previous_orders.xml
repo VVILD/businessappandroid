@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/etSearch"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_toLeftOf="@+id/bSearch"
+        android:background="@drawable/border"
+        android:gravity="center"
+        android:hint="Search Barcode/TrackingId"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/bSearch"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentRight="true"
+        android:background="@android:drawable/ic_menu_search" />
+
+    <Button
+        android:id="@+id/clearFilter"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/bSearch"
+        android:layout_centerHorizontal="true"
+        android:background="@color/blue"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:text="Clear Filter"
+        android:textColor="@color/white" />
+
+    <ListView
+
+
+        android:id="@+id/lvPreviousOrders"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/llButtons"
+        android:layout_below="@+id/clearFilter" />
+
+    <LinearLayout
+        android:id="@+id/llButtons"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:weightSum="100">
+
+        <Button
+            android:id="@+id/Previous"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="5dp"
+            android:layout_weight="50"
+            android:background="@color/blue"
+            android:text="Previous"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/Next"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="50"
+            android:background="@color/blue"
+            android:text="Next"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+</RelativeLayout>

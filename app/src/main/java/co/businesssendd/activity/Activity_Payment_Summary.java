@@ -29,7 +29,6 @@ public class Activity_Payment_Summary extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_payment_summary_list);
-        Gson GS = new Gson();
         Toolbar toolbar = (Toolbar) findViewById(R.id.Main_toolbar);
         setSupportActionBar(toolbar);
         toolbar.setNavigationIcon(R.drawable.arrow_back_icon_small);
@@ -42,6 +41,7 @@ public class Activity_Payment_Summary extends AppCompatActivity {
                     }
                 }
         );
+        Gson GS = new Gson();
         billings = Arrays.asList(GS.fromJson(getIntent().getStringExtra("completeDetails"), Billing[].class));
         PaymentSummary = (ListView) findViewById(R.id.PaymentSummary);
         madapter = new BillingList_Adapter(this, R.layout.list_item_paymentsummary, billings);
